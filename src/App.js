@@ -1,10 +1,13 @@
-import './App.css';
-import LoginPage from './LoginPage';
-import Header from './components/Header';
-import Student from './components/Student';
-import Movies from './components/Movies';
-import MoviesData from './movie.json';
-import React, { useState } from 'react';
+import "./App.css";
+import LoginPage from "./LoginPage";
+import Header from "./components/Header";
+import Student from "./components/Student";
+import Movies from "./components/Movies";
+import MoviesData from "./movie.json";
+import React, { useState } from "react";
+
+//Components
+import OnChangeTextClkBtn from "./components/OnChangeTextClkBtn";
 
 function App() {
   // return (
@@ -14,10 +17,10 @@ function App() {
   //     {
   //       MoviesData.map((element, index) =>{
   //         return(
-  //           <Movies 
+  //           <Movies
   //           key = {index}
   //           // props
-  //           title = {element.Title} 
+  //           title = {element.Title}
   //           year = {element.Year}
   //           img = {element.Poster}
   //           />
@@ -32,26 +35,31 @@ function App() {
   const [num, setNum] = useState(1);
   const incr = (n) => {
     setNum(num + n);
-  }
+  };
 
   const decr = (n) => {
     setNum(num - n);
-  }
+  };
 
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
 
-      <h1 className='heading'>{num}</h1>
-      <div className='main'>
-        <button className='btn' onClick={()=>incr(2)}> increment</button>
-        <button className='btn' onClick={()=>decr(1)}> decrement</button>
+      {/* <h1 className="heading">{num}</h1>
+      <div className="main">
+        <button className="btn" onClick={() => incr(2)}>
+          {" "}
+          increment
+        </button>
+        <button className="btn" onClick={() => decr(1)}>
+          {" "}
+          decrement
+        </button>
+      </div> */}
 
-      </div>
+      <OnChangeTextClkBtn/>
     </div>
   );
-
 }
 
 export default App;
-
