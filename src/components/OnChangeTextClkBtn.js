@@ -13,7 +13,7 @@ const OnChangeTextClkBtn = () => {
         <div style={{ color: "blue", fontSize: 20, textAlign:'center' }}>
           <text>Name: {name}</text>
           <button
-            style={{ display: "flex", marginLeft: 150 }}
+            style={{ display: "flex", marginLeft: 150, backgroundColor: 'green' }}
             onClick={() => setName("Aman")}
           >
             Change Name
